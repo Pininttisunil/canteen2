@@ -59,27 +59,22 @@
         .hidden {
             display: none;
         }
-        .form-container {
-            margin-bottom: 20px;
-        }
     </style>
 </head>
 <body>
-    <body background="back1.jpeg"></body>
     <div class="content" id="loginForm">
         <div class="Sing-in">
+            <body background="back1.jpeg"></body>
             <div class="logo">
                 <img src="s.png" alt="Logo">
             </div>
             <h4>LOGIN</h4>
-            <form>
-                <input type="text" placeholder="Enter email" required><br><br>
-                <input type="password" placeholder="Enter password" required><br>
+            <form onsubmit="handleLogin(event)">
+                <input type="text" id="email" placeholder="Enter email" required><br><br>
+                <input type="password" id="password" placeholder="Enter password" required><br>
                 <a href="#" onclick="showForgetPassword()">Forgot password?</a>
                 <br><br>
-                <button type="button">
-                    <a href="first.html" style="text-decoration: none; color: inherit;">Login</a>
-                </button>
+                <a href="first.html">Login</a>
                 <br><br>
                 <span class="signup">
                     Don't have an account? <a href="#" onclick="showSignUp()">Sign up</a>

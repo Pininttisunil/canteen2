@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login page</title>
+    <title>Login Page</title>
     <style>
-        body{
-            background-color:white;
-            margin:0px;
+        body {
+            background-color: white;
+            margin: 0px;
             font-size: 20px;
             padding: 0px;
             display: flex;
@@ -15,12 +15,12 @@
             align-items: center;
             justify-content: center;
         }
-        .content{
+        .content {
             background-color: white;
-            border-radius: 50px;
+            border-radius: 20px;
             padding: 20px;
             text-align: center;
-            position:relative;
+            position: relative;
         }
         .content h4 {
             margin-bottom: 20px;
@@ -64,76 +64,75 @@
         }
     </style>
 </head>
-<body background="back1.jpeg">
-    <div class="content">
+<body>
+    <body background="back1.jpeg"></body>
+    <div class="content" id="loginForm">
         <div class="Sing-in">
             <div class="logo">
-                <img src="s.png">
+                <img src="s.png" alt="Logo">
             </div>
-            <h4>
-                LOGIN
-            </h4>
+            <h4>LOGIN</h4>
             <form>
-                <input type="text" placeholder="enter email"></br></br>
-                <input type="password" placeholder="enter password"></br>
-                <a href="#" onclick="showForgetPassword()">Forget password?</a>
-                    </br> </br>
-                    <button>
-                        <a href="first.html" style="text-decoration: none; color: inherit;">Login</a>
-                    </button>
-                  </br></a>
-            </br>
-            <span class="signup">
-                Don't have an account? <a href="#" onclick="showSignUp()">Sign up</a>
-            </span>
+                <input type="text" placeholder="Enter email" required><br><br>
+                <input type="password" placeholder="Enter password" required><br>
+                <a href="#" onclick="showForgetPassword()">Forgot password?</a>
+                <br><br>
+                <button type="button">
+                    <a href="first.html" style="text-decoration: none; color: inherit;">Login</a>
+                </button>
+                <br><br>
+                <span class="signup">
+                    Don't have an account? <a href="#" onclick="showSignUp()">Sign up</a>
+                </span>
             </form>
         </div>
     </div>
-    <div class="form-container hidden" id="signUpForm">
+
+    <!-- Sign Up Form -->
+    <div class="content hidden" id="signUpForm">
         <h4>SIGN UP</h4>
         <form>
             <input type="text" placeholder="Enter full name" required>
             <input type="email" placeholder="Enter email" required>
             <input type="password" placeholder="Enter password" required>
             <input type="password" placeholder="Confirm password" required>
-            <button>Sign Up</button>
+            <button type="button">Sign Up</button>
         </form>
         <a href="#" onclick="showLogin()">Back to Login</a>
     </div>
 
     <!-- Forget Password Form -->
-    <div class="form-container hidden" id="forgetPasswordForm">
+    <div class="content hidden" id="forgetPasswordForm">
         <h4>FORGOT PASSWORD</h4>
         <form>
             <input type="email" placeholder="Enter your email to reset password" required>
-            <button>Submit</button>
+            <button type="button">Submit</button>
         </form>
         <a href="#" onclick="showLogin()">Back to Login</a>
     </div>
-</div>
 
-<script>
-    const loginForm = document.getElementById('loginForm');
-    const signUpForm = document.getElementById('signUpForm');
-    const forgetPasswordForm = document.getElementById('forgetPasswordForm');
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const signUpForm = document.getElementById('signUpForm');
+        const forgetPasswordForm = document.getElementById('forgetPasswordForm');
 
-    function showSignUp() {
-        loginForm.classList.add('hidden');
-        forgetPasswordForm.classList.add('hidden');
-        signUpForm.classList.remove('hidden');
-    }
+        function showSignUp() {
+            loginForm.classList.add('hidden');
+            forgetPasswordForm.classList.add('hidden');
+            signUpForm.classList.remove('hidden');
+        }
 
-    function showForgetPassword() {
-        loginForm.classList.add('hidden');
-        signUpForm.classList.add('hidden');
-        forgetPasswordForm.classList.remove('hidden');
-    }
+        function showForgetPassword() {
+            loginForm.classList.add('hidden');
+            signUpForm.classList.add('hidden');
+            forgetPasswordForm.classList.remove('hidden');
+        }
 
-    function showLogin() {
-        signUpForm.classList.add('hidden');
-        forgetPasswordForm.classList.add('hidden');
-        loginForm.classList.remove('hidden');
-    }
-</script>
+        function showLogin() {
+            signUpForm.classList.add('hidden');
+            forgetPasswordForm.classList.add('hidden');
+            loginForm.classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
